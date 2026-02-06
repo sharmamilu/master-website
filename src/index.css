@@ -1,0 +1,7 @@
+#root {
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: calc(100vh - 73px); /* Adjust based on navbar height */
+}
