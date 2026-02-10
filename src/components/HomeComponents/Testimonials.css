@@ -1,0 +1,137 @@
+/* SECTION */
+.testimonials {
+  position: relative;
+  padding: 60px 20px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f5f8ff 40%,
+      #eef3ff 70%,
+      #ffffff 100%
+    );
+  overflow: hidden;
+}
+
+/* subtle wave effect */
+.testimonials::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 300px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--primary-soft) 100%
+  );
+  z-index: 0;
+}
+
+.testimonials-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* HEADER */
+.testimonials-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.testimonials-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.testimonials-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
+}
+
+/* RATING */
+.testimonial-rating {
+  color: var(--primary);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* TEXT */
+.testimonial-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* USER */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.testimonial-user h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.testimonial-user span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* DOTS */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.testimonial-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cfd8ff;
+}
+
+.testimonial-dots .active {
+  background: var(--primary);
+  width: 10px;
+  height: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .testimonials-cards {
+    grid-template-columns: 1fr;
+  }
+}

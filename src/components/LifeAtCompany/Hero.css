@@ -1,0 +1,125 @@
+.life-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem var(--spacing-lg);
+  overflow: hidden;
+  background: var(--background-color);
+}
+
+/* background image */
+.life-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* gradient overlay */
+.life-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.65),
+    rgba(15, 23, 42, 0.35),
+    rgba(15, 23, 42, 0.15)
+  );
+  z-index: 1;
+}
+
+/* subtle wave glow */
+.life-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  right: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(96, 165, 250, 0.35),
+    transparent 70%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* content */
+.life-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 640px;
+  color: white;
+}
+
+.life-hero-content h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.life-hero-content h1 span {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.life-hero-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* button */
+.life-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.life-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .life-hero {
+    min-height: 70vh;
+    padding: 4rem var(--spacing-md);
+  }
+
+  .life-hero-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .life-hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

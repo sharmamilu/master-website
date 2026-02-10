@@ -1,0 +1,133 @@
+.testimonial-section {
+  position: relative;
+  padding: 2rem var(--spacing-lg);
+  background: linear-gradient(to bottom, #f7faff, #eef3fb);
+  overflow: hidden;
+}
+
+/* soft background shapes */
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(90,130,255,0.12), transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(90,130,255,0.10), transparent 45%);
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.testimonial-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.testimonial-header p {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* Cards layout */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.testimonial-card {
+  position: relative;
+  padding: 34px 28px 28px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* Quotes */
+.quote-icon,
+.closing-quote {
+  position: absolute;
+  font-size: 4rem;
+  color: #5a82ff;
+  opacity: 0.18;
+  font-weight: 700;
+}
+
+.quote-icon {
+  top: 10px;
+  left: 18px;
+}
+
+.closing-quote {
+  bottom: 8px;
+  right: 18px;
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+/* Rating */
+.testimonial-rating {
+  color: #fbbf24;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* User */
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-user img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5edff;
+}
+
+.testimonial-user h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.testimonial-user span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-header h2 {
+    font-size: 1.8rem;
+  }
+}

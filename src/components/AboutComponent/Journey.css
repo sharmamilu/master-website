@@ -1,0 +1,156 @@
+.journey {
+  position: relative;
+  padding: 3rem var(--spacing-lg);
+  background: linear-gradient(
+    to bottom,
+    var(--background-color),
+    var(--active-color)
+  );
+  overflow: hidden;
+}
+
+/* wave glow */
+.journey::after {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  right: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(96, 165, 250, 0.25),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* header */
+.journey-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--spacing-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.journey-header h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.journey-header p {
+  color: var(--text-secondary);
+}
+
+/* timeline */
+.journey-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+/* center line */
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--accent-color)
+  );
+}
+
+/* item */
+.journey-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* left side */
+.journey-item.left {
+  justify-content: flex-end;
+  padding-right: 55%;
+}
+
+/* right side */
+.journey-item.right {
+  justify-content: flex-start;
+  padding-left: 55%;
+}
+
+/* card */
+.journey-content {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  max-width: 420px;
+  position: relative;
+}
+
+[data-theme="dark"] .journey-content {
+  background: rgba(30, 41, 59, 0.85);
+}
+
+/* dot */
+.journey-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  background: var(--background-color);
+  border: 4px solid var(--primary-color);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 6px var(--primary-soft);
+}
+
+/* text */
+.journey-year {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.journey-content h3 {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.journey-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .journey-timeline::before {
+    left: 16px;
+  }
+
+  .journey-item {
+    padding-left: 3rem !important;
+    padding-right: 0 !important;
+    justify-content: flex-start;
+  }
+
+  .journey-dot {
+    left: 16px;
+    transform: none;
+  }
+}

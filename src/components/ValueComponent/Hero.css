@@ -1,0 +1,131 @@
+.values-hero {
+  padding: 2rem var(--spacing-md);
+ background: linear-gradient(to top, #eef2ff, var(--background-color));
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header */
+.values-header {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.values-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.values-header p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Carousel */
+.values-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Cards */
+.value-card {
+  width: 380px;
+  padding: 2.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(to top, #eef2ff, var(--background-color));
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.45s ease;
+  cursor: pointer;
+  opacity: 0.55;
+  transform: scale(0.85);
+}
+
+[data-theme="dark"] .value-card {
+  background: rgba(30, 41, 59, 0.75);
+}
+
+/* Active */
+.value-card.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Icon */
+.value-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.25),
+    rgba(139, 92, 246, 0.25)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Text */
+.value-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .values-carousel {
+    flex-direction: column;
+  }
+
+  .value-card {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dots */
+.values-dots {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(100, 116, 139, 0.4); /* neutral */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+.dot.active {
+  width: 26px;
+  border-radius: 999px;
+  background-color: var(--primary-color);
+}

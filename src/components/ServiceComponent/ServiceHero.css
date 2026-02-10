@@ -1,0 +1,330 @@
+/* ServiceHero.css */
+
+/* ===============================
+   Service Hero Section
+================================ */
+
+.service-hero {
+  padding: 0rem 1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--background-color, #ffffff),
+    #eef2ff
+  );
+  overflow: hidden;
+}
+
+.service-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ===============================
+   Left Content
+================================ */
+
+.service-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--heading-color, #0f172a);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.service-hero-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted, #475569);
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+
+.service-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   Buttons
+================================ */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.primary-btn {
+  background: var(--primary-color, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  color: var(--primary-color, #2563eb);
+  border: 1.5px solid var(--primary-color, #2563eb);
+}
+
+.secondary-btn:hover {
+  background: rgba(37, 99, 235, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Orbital Visual Container
+================================ */
+
+.service-hero-visual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbital-container {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Orbital Tracks (optional visual guides)
+================================ */
+
+.orbital-track {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(37, 99, 235, 0.15);
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.track-1 { width: 320px; height: 320px; }
+.track-2 { width: 400px; height: 400px; }
+.track-3 { width: 480px; height: 480px; }
+.track-4 { width: 360px; height: 360px; }
+
+/* ===============================
+   Center Hub
+================================ */
+
+.orbital-hub {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+}
+
+.hub-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+/* ===============================
+   Service Bubbles
+================================ */
+
+.service-bubble {
+  position: absolute;
+  top: -40%;
+  left: 60%;
+  transform-origin: center;
+  background: linear-gradient(135deg, #ffffff, #f0f7ff);
+  border-radius: 50%;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.1),
+    0 5px 15px rgba(37, 99, 235, 0.08),
+    inset 0 0 20px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.service-bubble::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
+  opacity: 0.5;
+}
+
+.service-bubble:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.15),
+    0 10px 25px rgba(37, 99, 235, 0.15),
+    inset 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Bubble icon */
+.service-bubble span {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Bubble label */
+.bubble-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0.75rem;
+  line-height: 1.2;
+  color: #334155;
+}
+
+/* ===============================
+   Bubble Sizes
+================================ */
+
+.service-bubble.large {
+  width: 120px;
+  height: 120px;
+}
+
+.service-bubble.medium {
+  width: 120px;
+  height: 120px;
+}
+
+.service-bubble.small {
+  width: 100px;
+  height: 100px;
+}
+
+/* ===============================
+   Responsive Design
+================================ */
+
+@media (max-width: 992px) {
+  .service-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .service-hero-content {
+    text-align: center;
+  }
+  
+  .service-hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-hero-actions {
+    justify-content: center;
+  }
+  
+  .orbital-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .track-1 { width: 280px; height: 280px; }
+  .track-2 { width: 350px; height: 350px; }
+  .track-3 { width: 420px; height: 420px; }
+  .track-4 { width: 315px; height: 315px; }
+  
+  .service-bubble.large {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .service-bubble.medium {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .service-bubble.small {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .service-bubble span {
+    font-size: 1.6rem;
+  }
+  
+  .bubble-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-hero {
+    padding: 3rem 1rem;
+  }
+  
+  .service-hero-content h1 {
+    font-size: 2.25rem;
+  }
+  
+  .orbital-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .track-1 { width: 240px; height: 240px; }
+  .track-2 { width: 300px; height: 300px; }
+  .track-3 { width: 360px; height: 360px; }
+  .track-4 { width: 270px; height: 270px; }
+  
+  .service-hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,74 @@
+.values-pledge-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--background-color),
+    #eef2ff
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.pledge-card {
+  max-width: 820px;
+  width: 100%;
+  text-align: center;
+  padding: 3.5rem 3rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  backdrop-filter: blur(10px);
+}
+
+.pledge-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.pledge-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+  position: relative;
+}
+
+.pledge-icon::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.pledge-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.pledge-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.pledge-divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  margin: 0 auto 1.25rem;
+  border-radius: 2px;
+}
+
+.pledge-signature {
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #64748b;
+}

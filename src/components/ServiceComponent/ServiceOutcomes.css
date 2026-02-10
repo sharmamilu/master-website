@@ -1,0 +1,103 @@
+.service-outcomes {
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: linear-gradient(
+    to bottom,
+    var(--background-color, #ffffff),
+    #eef2ff
+  );
+}
+
+/* Header */
+.service-outcomes__header {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-2xl);
+  text-align: center;
+}
+
+.service-outcomes__header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-outcomes__header p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Grid */
+.service-outcomes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* Card */
+.outcome-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.outcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.outcome-card__icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background: radial-gradient(
+    circle at top,
+    var(--primary-soft),
+    transparent
+  );
+}
+
+/* Content */
+.outcome-card__content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.outcome-card__content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-outcomes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-outcomes {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .service-outcomes__header h2 {
+    font-size: 1.8rem;
+  }
+}

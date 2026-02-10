@@ -1,0 +1,97 @@
+.leadconnect-section {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  display: flex;
+  justify-content: center;
+}
+
+.leadconnect-card {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Subtle floating wave effect */
+.leadconnect-card::before,
+.leadconnect-card::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent 70%);
+  border-radius: 50%;
+}
+
+.leadconnect-card::before {
+  top: -120px;
+  left: -120px;
+}
+
+.leadconnect-card::after {
+  bottom: -140px;
+  right: -140px;
+}
+
+/* Typography */
+.leadconnect-card h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--heading-color, #0f172a);
+  margin-bottom: 1rem;
+}
+
+.leadconnect-card p {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted, #475569);
+}
+
+/* Button */
+.leadconnect-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--primary-color, #2563eb);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
+}
+
+.leadconnect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(37, 99, 235, 0.45);
+}
+
+.leadconnect-btn .arrow {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.leadconnect-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leadconnect-card {
+    padding: 3rem 1.5rem;
+  }
+
+  .leadconnect-card h2 {
+    font-size: 1.85rem;
+  }
+}

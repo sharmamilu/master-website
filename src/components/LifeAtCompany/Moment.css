@@ -1,0 +1,110 @@
+.moment {
+  padding: 2rem var(--spacing-lg);
+    background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  position: relative;
+}
+
+/* glass container */
+.moment-glass {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem var(--spacing-xl);
+  border-radius: 2.5rem;
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-soft);
+}
+
+[data-theme="dark"] .moment-glass {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* header */
+.moment-header {
+  text-align: center;
+  max-width: 1400px;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.moment-header h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.moment-header p {
+  color: var(--text-secondary);
+}
+
+/* grid */
+.moment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* card */
+.moment-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+[data-theme="dark"] .moment-card {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.moment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* image */
+.moment-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.moment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.moment-card:hover img {
+  transform: scale(1.05);
+}
+
+/* text */
+.moment-text {
+  padding: 1rem 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .moment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .moment {
+    padding: 4rem var(--spacing-md);
+  }
+
+  .moment-glass {
+    padding: 3rem var(--spacing-md);
+  }
+
+  .moment-grid {
+    grid-template-columns: 1fr;
+  }
+}

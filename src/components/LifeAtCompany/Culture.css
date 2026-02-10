@@ -1,0 +1,123 @@
+.culture {
+  position: relative;
+  padding: 2rem var(--spacing-lg);
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  overflow: hidden;
+}
+
+/* glass container */
+.culture-glass {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem var(--spacing-xl);
+  border-radius: 2.5rem;
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+/* dark mode */
+[data-theme="dark"] .culture-glass {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* header */
+.culture-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.culture-header h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.culture-header p {
+  color: var(--text-secondary);
+}
+
+/* grid */
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* card */
+.culture-card {
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+  backdrop-filter: blur(14px);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-normal),
+  box-shadow var(--transition-normal);
+}
+
+[data-theme="dark"] .culture-card {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.culture-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* icon */
+.culture-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.25),
+    rgba(139, 92, 246, 0.25)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.culture-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* text */
+.culture-card h3 {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.culture-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .culture {
+    padding: 4rem var(--spacing-md);
+  }
+
+  .culture-glass {
+    padding: 3rem var(--spacing-md);
+  }
+
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,105 @@
+.leadership-team {
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+}
+
+.leadership-team-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.leadership-team-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.leadership-team-header h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.leadership-team-header p {
+  font-size: 1.05rem;
+  color: #64748b;
+}
+
+/* CARDS */
+.leadership-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* INDIVIDUAL CARD */
+.leader-card {
+  background: linear-gradient(
+    135deg,
+    var(--background-color),
+    #eef2ff,
+    #ffffff
+  );
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  backdrop-filter: blur(6px);
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* AVATAR */
+.leader-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.4),
+     rgba(96, 165, 250, 0.4) /* lighter blue */
+  );
+}
+
+.leader-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+}
+
+/* TEXT */
+.leader-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.leader-card span {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .leadership-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .leadership-cards {
+    grid-template-columns: 1fr;
+  }
+}

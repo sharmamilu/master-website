@@ -1,0 +1,106 @@
+.service-process {
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: linear-gradient(
+    to bottom,
+    var(--background-color, #ffffff),
+    #eef2ff
+  );
+  text-align: center;
+}
+
+/* Header */
+.service-process__header {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.service-process__header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-process__header p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Grid */
+.service-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* Card */
+.process-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.process-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: radial-gradient(
+    circle at top,
+    var(--primary-soft),
+    transparent
+  );
+  color: var(--primary);
+}
+
+/* Title */
+.process-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Description */
+.process-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .service-process {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .service-process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-process__header h2 {
+    font-size: 1.8rem;
+  }
+}

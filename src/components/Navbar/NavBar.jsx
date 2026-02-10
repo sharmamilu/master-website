@@ -111,12 +111,12 @@ const NavBar = () => {
           icon: <Briefcase size={16} />,
           description: "Sectors we serve",
         },
-        {
-          name: "Case Studies",
-          path: "/case-studies",
-          icon: <Award size={16} />,
-          description: "Success stories",
-        },
+        // {
+        //   name: "Case Studies",
+        //   path: "/case-studies",
+        //   icon: <Award size={16} />,
+        //   description: "Success stories",
+        // },
       ],
     },
     {

@@ -1,0 +1,119 @@
+.industries-serve {
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(
+    to bottom,
+    var(--surface-color),
+    var(--background-color)
+  );
+}
+
+.industries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Header */
+.industries-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.industries-header h2 {
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.industries-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Timeline */
+.industries-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  position: relative;
+}
+
+/* Item */
+.industry-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.industry-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  font-size: 1.8rem;
+}
+
+/* Color Variants */
+.industry-icon.blue {
+  color: var(--primary-color);
+}
+.industry-icon.teal {
+  color: #14b8a6;
+}
+.industry-icon.purple {
+  color: var(--accent-color);
+}
+.industry-icon.orange {
+  color: #f59e0b;
+}
+.industry-icon.red {
+  color: #ef4444;
+}
+
+.industry-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.industry-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Connector */
+.industry-connector {
+  position: absolute;
+  top: 38px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--border-color),
+    transparent
+  );
+  z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .industries-timeline {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .industry-connector {
+    display: none;
+  }
+}
