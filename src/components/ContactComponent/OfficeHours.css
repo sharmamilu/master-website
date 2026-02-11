@@ -1,0 +1,91 @@
+.office-hours-section {
+  padding: 90px 20px;
+  background: linear-gradient(to bottom, #f8fafc, #eef2ff);
+}
+
+/* Container */
+.office-hours-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header */
+.office-hours-header h2 {
+  font-size: 2.1rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.office-hours-header p {
+  max-width: 640px;
+  margin: auto;
+  font-size: 1rem;
+  color: #475569;
+}
+
+/* Cards Grid */
+.office-hours-cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* Card */
+.hours-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 32px 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.hours-card:hover {
+  transform: translateY(-6px);
+}
+
+.hours-card h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.hours-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.hours-card span {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Highlight Card */
+.hours-card.highlight {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+}
+
+.hours-card.highlight h3,
+.hours-card.highlight p,
+.hours-card.highlight span {
+  color: #fff;
+}
+
+/* Note */
+.office-hours-note {
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .office-hours-cards {
+    grid-template-columns: 1fr;
+  }
+}

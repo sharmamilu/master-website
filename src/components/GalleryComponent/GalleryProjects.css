@@ -1,0 +1,113 @@
+.gallery-projects {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, var(--background-color), #eef2ff);
+}
+
+.gallery-projects-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-projects-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.gallery-projects-header p {
+  color: #475569;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+/* Grid */
+.gallery-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.gallery-project-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.gallery-project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.project-image-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Icon badge */
+.project-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Content */
+.project-content {
+  padding-top: 16px;
+}
+
+.project-content h3 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+/* Button */
+.project-btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #1e40af;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .gallery-projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

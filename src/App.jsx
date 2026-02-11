@@ -10,11 +10,9 @@ import Leadership from "./pages/About/LeaderShip";
 import Service from "./pages/WhatWeOffer/Service";
 import Solution from "./pages/WhatWeOffer/Solution";
 import Industry from "./pages/WhatWeOffer/Industry";
+import Gallery from "./pages/Gallery/GalleryPage";
+import ContactPage from "./pages/Contact/ContactPage";
 // Import pages (we'll create these later)
-const HomePage = () => <div className="page-container">Home Page</div>;
-const AboutPage = () => <div className="page-container">About Us Page</div>;
-const ContactPage = () => <div className="page-container">Contact Page</div>;
-const GalleryPage = () => <div className="page-container">Gallery Page</div>;
 
 function App() {
   return (
@@ -27,7 +25,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/life" element={<LifeAtCompany />} />
               <Route path="/values" element={<Values />} />
               <Route path="/leadership" element={<Leadership />} />
